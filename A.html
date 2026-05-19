@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بطاقة عيد ميلاد 18</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #120018, #2b0036, #4d005f);
+  position: relative;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.8);
+  }
+}
+
+.card {
+  width: 92%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 30px;
+  padding: 35px 25px;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 35px rgba(255, 105, 180, 0.35);
+  animation: float 4s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.08), transparent);
+  transform: translateX(-100%);
+  animation: shine 6s infinite;
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 32px;
+  background: linear-gradient(45deg,#ff5ac8,#ffd6f6,#c77dff,#ff5ac8);
+  z-index: -1;
+  filter: blur(18px);
+  opacity: 0.55;
+}
+
+.time {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #ffd6f6, #ff91d8, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  line-height: 1.8;
+  color: #f9e8ff;
+  position: relative;
+  z-index: 2;
+}
+
+.number-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.ring {
+  display: none;
+}
+
+.ring::before,
+.ring::after {
+  content: '✦';
+  position: absolute;
+  color: white;
+  font-size: 14px;
+}
+
+.ring::before {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ring::after {
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.number {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 25px rgba(255,255,255,0.9);
+  animation: pulse 2s infinite;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0%,100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+.message {
+  font-size: 1rem;
+  line-height: 2;
+  color: #ffeefe;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  border: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(45deg,#ff5ac8,#c77dff);
+  color: white;
+  transition: 0.3s ease;
+  box-shadow: 0 0 18px rgba(255,90,200,0.5);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -60px;
+  width: 40px;
+  height: 160%;
+  background: rgba(255,255,255,0.3);
+  transform: rotate(25deg);
+  transition: 0.6s;
+}
+
+.btn:hover::before {
+  left: 130%;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 28px rgba(255,90,200,0.9);
+}
+
+.secret {
+  margin-top: 24px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 18px;
+  line-height: 1.9;
+  display: none;
+  animation: fadeIn 1s ease forwards;
+  color: #fff7fd;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -40px;
+  color: rgba(255,255,255,0.7);
+  animation: rise linear infinite;
+  font-size: 20px;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.footer {
+  margin-top: 22px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  position: relative;
+  z-index: 2;
+}
+
+.sparkle {
+  font-size: 1.4rem;
+  animation: rotate 6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+  </style>
+</head>
+<body>  <div class="stars"></div>
+  <div class="hearts"></div>  <div class="card">
+    <div class="glow"></div><div class="time">الساعة اقتربت من منتصف الليل ✨</div>
+
+<div class="title">عيد ميلاد سعيد</div>
+
+<div class="number-wrap">
+  <div class="number">18</div>
+</div>
+
+<div class="subtitle">
+  الليلة ليست عادية…<br>
+  إنها بداية فصل جديد مليء بالأحلام واللحظات الجميلة.
+</div>
+
+<div class="message">
+  أتمنى لك سنة تشبه قلبك تمامًا…<br>
+  مليئة بالنجاح، الضحكات، المغامرات، والسلام الداخلي.<br>
+  واليوم تبدأين عامك الثامن عشر بكل جماله وهيبته ✨
+</div>
+
+<button class="btn" onclick="showMessage()">
+  افتحي رسالتك السرية 💌
+</button>
+
+<div class="secret" id="secretBox">
+  <span class="sparkle">✨</span><br><br>
+  الثامنة عشرة ليست مجرد رقم…<br>
+  إنها بداية النسخة الأقوى والأجمل منك.<br><br>
+
+  تذكّري دائمًا:<br>
+  أنتِ قادرة على صنع حياة تليق بأحلامك.<br>
+  وكل شيء جميل ينتظرك في الطريق القادم 💜
+</div>
+
+<div class="footer">
+  Made with love at 12:00 AM 🌙
+</div>
+
+  </div>  <script>
+    function showMessage() {
+      const box = document.getElementById('secretBox');
+      box.style.display = 'block';
+
+      for(let i = 0; i < 40; i++) {
+        createConfetti();
+      }
+    }
+
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.innerHTML = ['✨','💖','🎉','🌸'][Math.floor(Math.random()*4)];
+      confetti.style.position = 'fixed';
+      confetti.style.left = Math.random() * window.innerWidth + 'px';
+      confetti.style.top = '-20px';
+      confetti.style.fontSize = (Math.random() * 18 + 16) + 'px';
+      confetti.style.zIndex = '999';
+      confetti.style.animation = `fall ${Math.random()*3+3}s linear forwards`;
+
+      document.body.appendChild(confetti);
+
+      setTimeout(() => {
+        confetti.remove();
+      }, 6000);
+    }
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes fall {
+        to {
+          transform: translateY(110vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    const starsContainer = document.querySelector('.stars');
+    for(let i = 0; i < 80; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 5 + 's';
+      starsContainer.appendChild(star);
+    }
+
+    const heartsContainer = document.querySelector('.hearts');
+    for(let i = 0; i < 20; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = ['💜','✨','💖'][Math.floor(Math.random()*3)];
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.animationDuration = (Math.random() * 8 + 6) + 's';
+      heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
+      heart.style.animationDelay = Math.random() * 5 + 's';
+      heartsContainer.appendChild(heart);
+    }
+  </script></body>
+  </html>
